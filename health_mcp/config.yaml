@@ -1,0 +1,24 @@
+name: Health MCP
+version: "0.1.0"
+slug: health_mcp
+description: Receives Apple Health data from the Health Auto Export app, stores it in SQLite and serves it to AI assistants over MCP.
+arch:
+  - aarch64
+  - amd64
+startup: services
+boot: auto
+init: false
+ports:
+  8099/tcp: 8099
+ports_description:
+  8099/tcp: "HTTP: POST /ingest (Health Auto Export) and /mcp (MCP Streamable HTTP)"
+options:
+  ingest_token: ""
+  mcp_token: ""
+  timezone: "Europe/Berlin"
+  log_level: "info"
+schema:
+  ingest_token: "password?"
+  mcp_token: "password?"
+  timezone: "str"
+  log_level: "list(debug|info|warning|error)"

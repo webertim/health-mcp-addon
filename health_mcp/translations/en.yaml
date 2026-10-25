@@ -1,0 +1,13 @@
+configuration:
+  ingest_token:
+    name: Ingest token
+    description: Bearer token Health Auto Export must send. Leave empty to auto-generate (printed in the log).
+  mcp_token:
+    name: MCP token
+    description: Bearer token your AI assistants must send. Leave empty to auto-generate (printed in the log).
+  timezone:
+    name: Timezone
+    description: IANA timezone used for "today" defaults, e.g. Europe/Berlin.
+  log_level:
+    name: Log level
+    description: debug logs every HTTP request.
